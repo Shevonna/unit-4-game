@@ -23,13 +23,13 @@ $("#losses").text(loses);
   function loser(){
   alert ("You lose!");
     loses++;
-    $('#losses').text(loses);
+    $("#losses").text(loses);
     reset()
   }
 
 function reset(){
     Randy=Math.floor(Math.random()*100+20)
-    $('#computer').text(Randy);
+    $("#computer").text(Randy);
     // var elems = document.getElementsByTagName( "input" );
     // var arr = jQuery.makeArray( input );
         c1= Math.floor(Math.random()*11+1);
@@ -37,12 +37,12 @@ function reset(){
         c3= Math.floor(Math.random()*11+1);
         c4= Math.floor(Math.random()*11+1);
         userTotal= 0;
-        $('#userAdd').text(userTotal);
+        $("#userAdd").text(userTotal);
         } 
  
-    $('#c1').on ('click', function(){
+    $("#c1").on ("click", function(){
       userTotal = userTotal + c1;
-      $('#userAdd').text(userTotal);           
+      $("#userAdd").text(userTotal);           
           if (userTotal == Randy){
             winner();
           }
@@ -51,7 +51,7 @@ function reset(){
           }   
     })  
 
-    $('#c2').on ('click', function(){
+    $("#c2").on ("click", function(){
         userTotal = userTotal + c2;
         $('#userAdd').text(userTotal); 
             if (userTotal == Randy){
@@ -62,9 +62,9 @@ function reset(){
             }   
       })    
 
-      $('#c3').on ('click', function(){
+      $("#c3").on ("click", function(){
         userTotal = userTotal + c3;
-        $('#userAdd').text(userTotal); 
+        $("#userAdd").text(userTotal); 
             if (userTotal == Randy){
               winner();
             }
@@ -73,9 +73,9 @@ function reset(){
             }   
       }) 
 
-      $('#c4').on ('click', function(){
+      $("#c4").on ("click", function(){
         userTotal = userTotal + c4;
-        $('#userAdd').text(userTotal); 
+        $("#userAdd").text(userTotal); 
             if (userTotal == Randy){
               winner();
             }
